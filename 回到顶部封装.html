@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Demo 回到顶部封装</title>
+	<style>
+		body {
+			margin: 0px;
+		}
+		.wrap {
+			width: 1200px;
+			min-height: 3000px;
+			margin: 0 auto;
+			border: green 1px solid;
+		}
+		#returnTop {
+			display: none;
+			position: fixed;
+			right: 50%;
+			bottom: 30px;
+			width: 40px;
+			height: 40px;
+			margin-right: -650px;
+			background: url("top_bg.png") no-repeat left top;
+		}
+		#returnTop:hover {
+			background: url("top_bg.png") no-repeat 0 -39px;
+		}
+	</style>
+</head>
+<body>
+	<a href="javascript:;" id="returnTop" title="回到顶部"></a>
+	<div class="wrap"></div>
+	<script src="backToTop.js"></script>
+	<script>
+		window.onload = function() {
+			new BackToTop("returnTop");
+		};
+	</script>
+</body>
+</html>
